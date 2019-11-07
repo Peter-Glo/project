@@ -9,43 +9,99 @@
     <link rel="stylesheet" href="css/w3.css">
     <style>
         button{
-            font-size: 12px;
+            font-size:12px;
+            color:#fff;
             width : 80px;
             height: 65px;
             border: 3px solid blueviolet;
-            margin: 5/px;
+            margin: 5px;
         }
     </style>
 </head>
 <body class="bg-primary">
     <div class="w3-container w3-pale-blue w3-center">
-<button onclick="bass(event)" id="0" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="1" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="2" class="w3-btn bg-warning w3-card-4"></button><br>
-<button onclick="bass(event)" id="3" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="4" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="5" class="w3-btn bg-warning w3-card-4"></button><br>
-<button onclick="bass(event)" id="6" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="7" class="w3-btn bg-warning w3-card-4"></button>
-<button onclick="bass(event)" id="8" class="w3-btn bg-warning w3-card-4"></button>
+<button onclick="bass(event)" id="0" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="1" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="2" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button><br>
+<button onclick="bass(event)" id="3" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="4" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="5" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button><br>
+<button onclick="bass(event)" id="6" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="7" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
+<button onclick="bass(event)" id="8" class="w3-btn bg-warning w3-card-4 w3-text-animate-zoom"></button>
 
 
     </div>
 <script>
+    var q =true,win = false, bravo = false, over = false;
+     
 var ply1 = "X";
 var ply2 = "O";
-var welarray = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,3,6],
-    [1,4,7],
-    [2,5,8],
-    [0,4,8],
-    [6,4,2t
-];
+var welarray = ["","","","","","","","",""]; 
 
+function asp(){
+    noble([0,1,2]),
+    noble([3,4,5]),
+    noble([6,7,8]),
+    noble([0,3,6]),
+    noble([1,4,7]),
+    noble([2,5,8]),
+    noble([0,4,8]),
+    noble([6,4,2])
 
+    
+}
+
+function put(q, o){
+return welarray[q]=o;
+}
+function noble(q,o,m){
+    
+    if(q !="" && o !="" && m !=''){
+if(q === o && o === m){
+    win = true;
+    bravo = true;
+    return;
+    alert("wow")
+}else{
+    over = true;
+    return win = false;
+    alert("wooow")
+}
+}
+}
+function bass(e){
+    var o = e.target.innerHTML;
+    var r = e.target.innerText;
+    if (!win && !bravo){
+    if (q && o =="") {
+        // alert("wowo");
+        q = false;
+        e.target.innerText = ply1;
+        
+        put(e.target.id, ply1);
+        
+    } else if(!q && o ==""){
+        q=true;
+        e.target.innerText = ply2;
+        
+         put(e.target.id, ply2);
+         
+    }else { function noble(q,o,m){
+        if(q !="" && o !="" && m !=''){
+if(q === o && o === m){
+    win = true;
+    bravo = true;
+    return;
+    alert("wow")
+}
+console.log(welarray)
+
+}
+    }
+}
+
+}}
 </script>
 
 </body>
