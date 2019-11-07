@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smile</title>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	
+</head>
+<body>
+<canvas id="mycanvas" style="width: 600px; height: 350px; margin-left: 20px; border: 1px solid blue;"></canvas>
+
+
+
+<script type="text/javascript">
+	var canvas= document.getElementById('mycanvas');
+	var can = canvas.getContext("2d");
+
+	can.beginPath();
+	can.arc(145,75,70,0,2*Math.PI);
+	can.stroke();
+
+	can.arc(145,95,40,0,1*Math.PI);
+	// can.arc(145,25,20,0,2*Math.PI);
+
+	
+	can.stroke();
+
+</script>
+</body>
+</html>

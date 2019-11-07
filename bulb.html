@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <title>bulb</title>
+</head>
+<body id="bd" class="w3-black">
+ <div class="w3-panel img w3-center">
+ 	<img id="img" src="img/dbub.jpg" width="450">
+ 	<button id="blue" style=" margin-top: -10%;" class=" w3-btn w3-hover-orange" onclick="btn(event)">ON</button>
+ 	<button id="blueb" style=" margin-top: -10%;display: none;" class=" w3-btn w3-hover-orange" onclick="bn(event)">OFF</button>
+
+ </div>
+
+<script type="text/javascript">
+	function btn(e) {
+		document.getElementById('img').src="img/dbub2.jpg";
+		document.getElementById('blue').style.display = "none";
+		document.getElementById('blueb').style.display = "block";
+
+	}
+	function bn(e) {
+		document.getElementById('img').src="img/dbub.jpg";
+		document.getElementById('blueb').style.display = "none";
+		document.getElementById('blue').style.display = "block";
+			
+	}
+</script>
+</body>
+</html>

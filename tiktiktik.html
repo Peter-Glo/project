@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<style type="text/css">
+		
+button{
+	margin: 5px;
+	width: 20%;
+	height: 100px;
+	border: 3px solid red;
+}
+
+	</style>
+</head>
+<body class="w3-pale-green">
+<nav class="w3-container w3-panel bg-green">
+<button id="0" class="bmw w3-btn w3-pink"></button>
+<button id="1" class="bmw w3-btn w3-pink"></button>
+<button id="2" class="bmw w3-btn w3-pink"></button><br>
+<button id="3" class="bmw w3-btn w3-pink"></button>
+<button id="4" class="bmw w3-btn w3-pink"></button>
+<button id="5" class="bmw w3-btn w3-pink"></button><br>
+<button id="6" class="bmw w3-btn w3-pink"></button>
+<button id="7" class="bmw w3-btn w3-pink"></button>
+<button id="8" class="bmw w3-btn w3-pink"></button>
+</nav>
+<div class="end">
+	<p class="result"></p>
+	<button>Replay</button>
+</div>
+
+<script type="text/javascript">
+	var allofbutton;
+	var Xplayer="X";
+	var Oplayer="O";
+	var array =[
+[0,1,2],
+[3,4,5],
+[6,7,8],
+[0,3,6],
+[1,4,7],
+[2,5,8],
+[0,4,8],
+[6,4,2]
+
+]
+
+var ball = document.getElementsByClassName('bmw');
+begin();
+
+function begin() {
+	allofbutton = Array.from(Array(9).keys());
+	for (var i = 0; i < ball.length; i++) {
+		ball[i].addEventListener('click', switchclick, false);
+	}
+	console.log(allofbutton);
+}
+	
+function switchclick(press){
+if (typeof allofbutton[press.target.id] === "number") {
+	swit(press.target.id, Xplayer);
+	console.log(press.target.id);
+
+
+	
+}
+}
+function swit(pressId, player) {
+	allofbutton[pressId]=player;
+	document.getElementById(pressId).innerText = player;
+
+	var winn = checkwin(allofbutton,player);
+	if(winn) over(winn);
+}
+
+// function declareWinner(ho) {
+// 	document.getElementsByClassName("end").style.display = "block";
+// 	document.getElementsByClassName("result").innerText = ho;
+
+	
+// }
+
+function checkwin(button,player){
+let play = button.reduce((a,b,c) =>
+		(b === player) ? a.concat(c) : a,[]);
+
+	var winn =null;
+	for(var [index,win] of array.entries()){
+		if (win.every(elem => play.indexOf(elem) > -1)) {
+	winn = {index: index, player: player};
+break;
+}
+	
+
+	}
+	return winn;
+}
+
+
+function over(winn) {
+	for(var index of array[winn.index]){
+		
+		
+	}
+
+	for (var i = 0; i < ball.length; i++) {
+		ball[i].removeEventListener("click", switchclick, false);
+	}
+	// declareWinner(uwon.player == Xplayer ? "You win!" : "You lose.")
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tiktik</title>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		button{
+			border: 2px solid red;
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+		}
+
+	</style>
+</head>
+<body>
+<nav class="w3-panel w3-container bg-warning w3-center">
+<button id="0" class="bb w3-btn w3-grey"></button>
+<button id="1" class="bb w3-btn w3-grey"></button>
+<button id="2" class="bb w3-btn w3-grey"></button><br>
+<button id="3" class="bb w3-btn w3-grey"></button>
+<button id="4" class="bb w3-btn w3-grey"></button>
+<button id="5" class="bb w3-btn w3-grey"></button><br>
+<button id="6" class="bb w3-btn w3-grey"></button>
+<button id="7" class="bb w3-btn w3-grey"></button>
+<button id="8" class="bb w3-btn w3-grey"></button>
+</nav>
+
+<nav class="game-ended bg-dark" style="width:200px; position: absolute;left: 50%; text-align: center; font-size: 2em; margin-top: -40%; height: 290px; display: none;">
+	<div class="text w3-text-white"></div>
+<input type="button" name="" onclick="begingame(window.location.reload())" value="Replay" class="w3-round-xlarge w3-btn bg-danger">
+</nav>
+
+
+
+<script type="text/javascript">
+	var allbutton;
+	var Oplayer = "O";
+	var Xplayer = "X";
+	var array = [
+	[0,1,2],
+	[3,4,5],
+	[6,7,8],
+	[0,4,8],
+	[1,4,7],
+	[0,3,6],
+	[2,5,8],
+	[6,4,2]
+	];
+
+var lass = document.getElementsByClassName("bb");
+begingame();
+
+function begingame() {
+	document.querySelector(".game-ended").style.display = "none";
+
+	allbutton = Array.from(Array(9).keys());
+	for (var i = 0; i < lass.length; i++) {
+		lass[i].addEventListener('click', turnclick, false);
+	}
+
+	console.log(allbutton);
+}
+
+ function turnclick(noble){
+ 	if(typeof allbutton[noble.target.id] =="number"){
+ 		turn(noble.target.id, Xplayer);
+ 	if (!checkTie()) turn(pplayer(), Oplayer);
+	console.log(noble.target.id);
+ 	}
+}
+function turn(nobleId, player){
+	allbutton[nobleId]= player;
+	document.getElementById(nobleId).innerText = player;
+
+	let uwon = checkwin(allbutton,player)
+	if (uwon) gameover(uwon);
+}
+
+function checkwin(button, player) {
+	let play = button.reduce((a,b,c) =>
+		(b === player) ? a.concat(c) : a,[]);
+let uwon = null;
+for(let [index,win] of array.entries()){
+if (win.every(elem => play.indexOf(elem) > -1)) {
+	uwon = {index: index, player: player};
+	break;
+}
+}
+return uwon;
+}
+
+function gameover(uwon){
+for(let index of array[uwon.index]){
+	// document.getElementById(index).style.backgroundColor = uwon.player == Xplayer ? "purple" : "blue";
+// alert("you win")
+
+}
+	for (var i = 0; i < lass.length; i++) {
+		lass[i].removeEventListener("click", turnclick, false);
+}
+declareWinner(uwon.player == Xplayer ? "You win!" : "You lose.")
+}	
+
+function declareWinner(who) {
+	document.querySelector(".game-ended").style.display='block';
+	document.querySelector(".game-ended .text").innerText =who;
+
+}
+
+function empsquare() {
+	return allbutton.filter(s => typeof s == "number")
+}
+
+function pplayer() {
+	return empsquare()[0];
+}
+
+function checkTie() {
+	if (empsquare().length == 0) {
+		for (var i = 0; i < lass.length; i++) {
+			lass[i].style.backgroundColor = "green";
+			lass[i].removeEventListener("click", turnclick, false);
+		}
+		declareWinner("Tie game!")
+		return true;
+	}
+	return false;
+}
+
+</script>
+</body>
+</html>

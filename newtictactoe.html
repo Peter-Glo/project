@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tictac</title>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		button{
+			width: 20%;
+			height: 70px;
+		}
+		#game{
+			display: none;
+		}
+	</style>
+</head>
+<body class="w3-pale-green">
+<div id="game" class="container w3-center w3-margin-top w3-animate-zoom">
+	<button id="0" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="1" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="2" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button><br><br>
+	<button id="3" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="4" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="5" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button><br><br>
+	<button id="6" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="7" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+	<button id="8" class="w3-round w3-btn w3-blue w3-large" onclick="tap(event)"></button>
+
+<br>
+<nav class=" w3-center">
+<button onclick="(window.location.reload())" class="bg-success w3-round w3-btn  w3-xxlarge">Play Again </button>
+</nav>
+</div>
+<div>
+	<button id="bb" class="w3-round w3-btn w3-large w3-purple w3-bottom btn" onclick="dis()">start</button>
+</div>
+<script type="text/javascript">
+	var array = ['','','','','','','','',''];
+	
+
+
+	var a =true,  gameover=false,  win = false, winner=false,
+
+	 function sep() {
+
+	 	show(array[0],array[1], array[2]);
+	 	show(array[3],array[4], array[5]);
+	 	show(array[6],array[7], array[8]);
+	 	show(array[0],array[3], array[6]);
+	 	show(array[1],array[4], array[7]);
+	 	show(array[2],array[5], array[8]);
+	 	show(array[0],array[4], array[8]);
+	 	show(array[2],array[4], array[6]);
+	 }
+
+
+function show(a,b,c) {
+	if (a !='' && b != '' && c !='') {
+		if (a===b && b===c) {
+			win = true;
+			winner = true;
+			alert('WINNER CONGRATULATION');
+			return;
+
+		} else {
+			gameover=true;
+			alert("you lose");
+			// show();
+			
+			return win = false;
+		}
+	}
+}
+
+function bell(a,b) {
+	return array[a]=b;
+}
+
+function tap(e) {
+	var tan = e.target.innerHTML;
+	if (!win && !winner) {
+		if (a  && tan == "") {
+			a=false;
+			e.target.innerText="X";
+			bell(e.target.id, "X");
+		} else if (!a && tan == '') {
+			a=true;
+			e.target.innerText="O";
+			bell(e.target.id, "O");
+
+		
+		}
+show();
+	}
+}	
+
+function dis() {
+	document.getElementById('game').style.display = "block";
+	document.getElementById('bb').style.display = "none";
+}
+
+</script>
+</body>
+</html>

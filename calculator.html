@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="font/css/all.css">
+    <title>Document</title>
+</head>
+<body class="w3-pale-green">
+    <p id="aler" class="w3-pink w3-text-white"></p>
+    <nav style="width: 300px; margin-left:10%; height:430px; border: 2px solid black;" class="w3-panel w3-center">
+<br><input type="" name="" class="w3-pale-red w3-xlarge" id="display"><br><br>
+<div class="w3-card-4" style="height: 330px;">
+
+        
+        
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="opom(event)">CE</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="%" onclick="opo(event)">%</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="/" onclick="opo(event)">/</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="mm(event)">C</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="7" onclick="clickme(event)">7</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="8" onclick="clickme(event)">8</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="9" onclick="clickme(event)">9</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="+" onclick="opo(event)">+</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="4" onclick="clickme(event)">4</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="5" onclick="clickme(event)">5</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="6" onclick="clickme(event)">6</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="-" onclick="opo(event)">-</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="1" onclick="clickme(event)">1</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="2" onclick="clickme(event)">2</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="3" onclick="clickme(event)">3</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="*" onclick="opo(event)">*</button>
+    
+    <button class="w3-round w3-btn bg-warning" style="width: 60%; height:40px; margin-top:20px;" id="0" onclick="clickme(event)">0</button>
+    
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator"  value="=" onclick="opob()">=</button>
+</div>
+</nav>
+
+
+<script>
+//    
+function opo(e){
+   
+    display.value += e.target.innerHTML;
+}
+
+    function clickme(e) {
+
+    display.value +=event.target.innerHTML;
+    }
+function opob(){
+    
+    if (display.value !="" ){
+        display.value = eval(display.value);
+        aler.innerHTML="Welcome thanks for using our calculator ";
+    } else {
+    alert("please insert an operator or a number to perform operation."  + "\n Thanks!!!");
+        
+    }
+    
+    
+}
+function mm(){
+    display.value = display.value.slice (0, -1);
+}
+function opom(){
+    display.value = "";
+}
+
+
+
+</script>
+</body>
+</html>

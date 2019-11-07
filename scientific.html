@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="font/css/all.css">
+    <style>
+    #display{
+        height:55px;
+        
+    }
+    </style>
+</head>
+<body class="bg-green">
+        <p id="aler" class="w3-pink w3-text-white"></p>
+        <nav style="width: 300px; margin-left:10%; height:530px; border: 2px solid black;" class="w3-panel w3-center">
+    <br><input type="" name="" class="w3-pale-red w3-xlarge w3-car-4" id="display"><br><br>
+
+            <div class="w3-card-4" style="height: 430px;">
+
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmea(event)">Log</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmel(event)">X^2</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmef(event)">Cos</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator"  onclick="clickmec(event)">Tan</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmed(event)">sin</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator"  onclick="clickmee(event)"><i class="fas fa-square-root-alt"></i></button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="hyp(event)">Hyp</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="abs(event)">Abs</button>
+        <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmeb(event)">CE</button>
+
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="%" onclick="clickme(event)">%</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="/" onclick="clickme(event)">/</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" onclick="clickmeg(event)">C</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="7" onclick="clickme(event)">7</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="8" onclick="clickme(event)">8</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="9" onclick="clickme(event)">9</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="+" onclick="clickme(event)">+</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="4" onclick="clickme(event)">4</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="5" onclick="clickme(event)">5</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="6" onclick="clickme(event)">6</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="-" onclick="clickme(event)">-</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="1" onclick="clickme(event)">1</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="2" onclick="clickme(event)">2</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="3" onclick="clickme(event)">3</button>
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator" value="*" onclick="clickme(event)">*</button>
+    
+    <button class="w3-round w3-btn bg-warning" style="width: 60%; height:40px; margin-top:20px;" id="0" onclick="clickme(event)">0</button>
+    
+    <button class="w3-round w3-btn bg-warning" style="width: 20%; height:40px; margin-top:20px;" id="operator"  value="=" onclick="opob()">=</button>
+            </div>
+</nav>
+
+
+<script>
+
+function clickmee(e){
+    display.value = Math.sqrt(display.value);
+}
+
+function clickmed(e){
+    display.value = Math.sin(display.value * Math.PI / 180);
+}
+
+function clickmec(e){
+    display.value = Math.tan(display.value * Math.PI / 180);
+}
+
+function clickmef(e){
+      display.value = Math.cos(display.value * Math.PI / 180);
+
+}
+function hyp(e){
+    display.value = Math.hyp(display.value * Math.PI / 180);
+}
+
+    function clickmeb(e){
+          display.value = "";
+    }
+    function clickmea(e){
+          display.value = Math.log10(display.value * Math.PI /180);
+          
+    }
+    
+
+    function clickmeg(e){
+          display.value = display.value.slice (0,-1);
+    }
+
+function clickme(e){
+display.value += e.target.innerText;
+}
+function opob(){
+    display.value = eval(display.value);
+    clickmef();
+}
+function clickmel(e){
+    display.value = Math.pow(display.value, 2);
+    }
+
+    function abs(e){
+        display.value = Math.abs(display.value)
+    }
+</script>
+    </body>
+</html>

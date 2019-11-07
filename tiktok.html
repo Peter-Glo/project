@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIKTOKE</title>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+<style type="text/css">
+	/*body{
+		background-image: url(var.jpg);
+		position: bottom right, center left;
+
+	}*/
+
+	/*td{opacity: 0.5;
+		width: 20%;
+		height: 60px;
+		/*float: right;*/
+	}*/
+	#allbtn{
+		width: 50%;
+		margin-left: 20%;
+		margin-top: 10%;
+
+	}
+	td{
+		text-align: center;
+	}
+	.j{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+		font-size: 50px;
+		font-family: arial;
+	}
+
+</style>
+
+</head>
+<body>
+	<div id="allbtn">
+<table id="te">
+	<tr class="tw">
+		<td id="0" class="j" onclick="we(event)"></td>
+		<td id="1" class="j" onclick="we(event)"></td>
+		<td id="2" class="j" onclick="we(event)"></td>
+	</tr>
+		<br>
+	<tr class="tw">
+		<td id="3" class="j" onclick="we(event)"></td>
+		<td id="4" class="j" onclick="we(event)"></td>
+		<td id="5" class="j" onclick="we(event)"></td>
+	</tr>
+		<br>
+	<tr class="tw">
+		<td id="6" class="j" onclick="we(event)"></td>
+		<td id="7" class="j" onclick="we(event)"></td>
+		<td id="8" class="j" onclick="we(event)"></td>
+	</tr>
+		
+	</tr>
+</table>
+<nav id="result" style="color: red;"></nav>
+
+</div>
+
+<script type="text/javascript">
+	var array =['','','','','','','','',''];
+var p=true, win=false, winner= false , gameover=false;
+
+function arr() {
+		 	answer(array[0],array[1], array[2]);
+		 	answer(array[3],array[4], array[5]);
+		 	answer(array[6],array[7], array[8]);
+		 	answer(array[0],array[3], array[6]);
+		 	answer(array[1],array[4], array[7]);
+		 	answer(array[2],array[5], array[8]);
+		 	answer(array[0],array[4], array[8]);
+		 	answer(array[2],array[4], array[6]);
+		
+
+}
+
+function set(p,b) {
+	return array[p]= b;
+	
+}
+
+function answer(p,b,c) {
+	if (p !='' && b !="" && c !='') {
+if (p=== b && b===c) {
+alert("congrate player");
+win=true;
+	winner=true;
+	return;
+
+	
+}
+else{
+	gameover=true;
+	alert('you loose');
+	return win = false;
+	
+	
+}
+
+
+}
+	
+	
+	}
+	function we(e) {
+		var b = e.target.innerHTML;
+if (!win && !winner) {
+		
+		if (p  && b =='') {
+			p=false;
+			e.target.innerHTML = 'X';
+			set(e.target.id, "X");
+		} else if(!p && b =='') {
+			p=true;
+			e.target.innerHTML = 'O';
+			set(e.target.id, 'O');
+			// return answer(set());
+		}
+arr();
+	}
+console.log();
+
+
+}
+
+</script>
+</body>
+</html>

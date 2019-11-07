@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transport count</title>
+	<script type="text/javascript" src="newcounter.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="newcounter.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="font/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/w3-color.css">
+	<link rel="stylesheet" type="text/css" href="css/w3-metro-color.css">
+
+
+</head>
+<body onload="unstart()" class="w3-metro-light-green">
+<div id="topinput">
+	<input type="" class="w3-serif w3-card-4 " id="wel" name="" disabled>&#10004;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="" class="w3-serif w3-card-4 " id="wel1" name="" disabled>&#10004;&nbsp;&nbsp;
+	<div id="hi" class="w3-dropdown-hover">
+<button class="w3-aqua w3-round-xlarge w3-button " onclick="hist()" id="histo"><i class="fa fa-history w3-spin"></i></button>
+<span id="histo" class="w3-dropdown-content w3-text-pink w3-animate-zoom">History</span>
+	
+</div>
+</div>
+
+<br>
+<div id="history" style="display: none; width: 60%; margin-left: 10%; height: 400px;" class="w3-animate-zoom w3-panel w3-round w3-red">
+	<button style="transition: .75s; cursor: pointer; margin-right: -10%; float: right;" class="w3-round w3-gray w3-hover-blue btn" onclick="clw()">&times;</button>
+	<button id="prnt" class="w2-panel w3-round-large w3-btn bg-warning" style="float: right;" onclick="Print()">Print page</button>
+	<br>
+	<p id="hint" class="w3-hover-text-white"></p>
+	
+</div>
+<br>
+
+<nav id="firstp">
+	<br><br><br>
+	<div id="myani" class="w3-animate-fading">
+	<img src="newcounter.jpg" style="width: 30%;">
+</div>
+<div id="myanimate" class="w3-animate-fading">
+
+<img src="newcounter1.jpg" style="width: 30%;">
+</div>
+	
+	<button onclick="start()" class="w3-button w3-round-xxlarge w3-xxxlarge w3-arial w3-card-4 w3-topbar w3-hover-border-red w3-center" style=" margin-top: 30%; margin-left: 37%;">START</button>
+</nav>
+
+<div id="allsec">
+<div id="pop" class="w3-container w3-animate-zoom "><button class="wep" onclick="cl()">&times;</button>
+			<br><nav class="w3-animate-zoom">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category Name!!<br>
+			<input type="text" class="w3-animate-input" id="gory" name=""><br><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Write Discription...<br><br>
+			<input type="text" class="w3-animate-input" id="cription" name=""><br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="w3-btn bg-warning w3-round w3-hover-border-red" onclick="include()">Include</button>
+		</nav>
+
+</div>
+<br>
+<div id="add">
+	<button id="button" class="w3-circle w3-button w3-right w3-bottom" onclick="add()">+</button>
+</div>
+</div>
+<div id="result"></div>
+<nav id="totals">
+	<input id="imp" type="number" disabled name="">
+	<button onclick="total()">Total</button>
+	<button onclick="rst()">Reset</button>
+
+</nav>
+</body>
+</html>

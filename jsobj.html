@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+</head>
+<body>
+<input type="" placeholder="Name" id="name" name="">
+<input type="" placeholder="Author" id="author" name="">
+<input type="" placeholder="No of pages" id="pages" name="">
+<button onclick="set(event)">OK</button>
+<button onclick="show()">Show added Books</button>
+<div id="result"></div>
+<script type="text/javascript">
+	
+		
+function set(e) {
+	var obj = localStorage.setItem("objects",obj);
+	  var N = document.getElementById('name').value;
+	  var A = document.getElementById('author').value;
+	  var P = document.getElementById('pages').value;
+	  
+obj.push(N , A , P);
+	 localStorage.objects = obj;
+
+	   console.log(obj);
+}
+
+function show() {
+	var N = document.getElementById('name').value;
+	  var A = document.getElementById('author').value;
+	  var P = document.getElementById('pages').value;
+	  
+	result.innerHTML += N +"  "+ A+"  " + P +"<br>";
+
+	console.log(result.innerHTML);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+.w3-container{
+	background-image: url(img/2.jpg);
+	background-repeat: no-repeat;
+	/*position: fixed;*/
+	background-attachment: fixed;
+}
+
+#wow{
+	float: right;
+	margin-top: 15px;
+	margin-right: -270px;
+	font-size: 28px;
+	cursor: pointer;
+	color: #fff;
+}
+#b{
+	margin-top: 60%;
+	background-color: transparent;
+}
+
+/*the header and icons*/
+
+.w3-header{
+
+	margin-top: 40px;	
+	background-color: #212121;
+	width: 1100px;
+	margin-left: -20px;
+	height: 180px;
+}
+#wel, .w3w a{
+	text-decoration: none;
+	transition: 1s;
+	font-weight: bold;
+}
+.icons{
+	font-weight: bold;
+	margin-left: 80%;
+color: #fff;
+}
+/*header ends here*/
+/*the animation section*/
+
+#we{
+	font-weight: bold;
+	font-size: 250px;
+}
+
+#n{
+	margin-left: -70%;
+	margin-top: -15%;
+	letter-spacing: 2px;
+}
+
+#l{
+	margin-left: 75%;
+	margin-top: -9%;
+	letter-spacing: 2px;
+}
+#v{
+	margin-left: -85%;
+	margin-top: -15%;
+	letter-spacing: 2px;
+}
+#b{
+	margin-left: 85%;
+	margin-top: -9%;
+	letter-spacing: 2px;
+}
+
+#taxi{
+	
+	margin-top: -47%;
+	animation-duration: 7s;
+	
+	animation-name: taxi;
+	animation-iteration-count: infinite;
+
+}
+
+#go{
+	
+	animation-duration:5s;
+	
+	animation-name: go;
+	animation-iteration-count: infinite;
+}
+
+@keyframes taxi {
+	0%,49%{opacity: 0};
+	50%,100%{opacity: 1};
+}
+@keyframes go{
+	0%,49%{opacity: 1};
+	50%,100%{opacity: 0};
+}
+#bt{
+	margin-top: 20px;
+	margin-left: 43%;
+}
+.ul{
+	list-style: none;
+	color: #fff;
+}
+./*dot{
+	margin-left: 30%;
+	color: #fff;
+	font-size: 10px;
+	cursor: pointer;
+}*/
+
+/*end of animation*/
+
+/*welcome section*/
+.welcome{
+	
+}
+#w{
+	font-weight: bold;
+}
+.wep{
+	margin-left: -60px;	
+	font-family: arial;
+}
+.w3-text-gray{
+	font-family: arial;
+}
+#qw{
+	margin-left: 55px;
+}
+/*welcome section ends here*/
+
+/*the about section begins*/
+
+.container{
+	background-image: url(img/1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.allabout{
+	display: flex;
+}
+/*end of about*/
+
+/*what we offer*/
+.what{
+	display: flex;
+}
+.img{
+	width: 48%;
+}
+/*end of offer*/
+
+/*Gallery start*/
+#Gallery{
+	background-color: #E6E6E6;
+}
+
+.img1, .img2, .img3 {
+margin-left: 10px;
+margin-top: 8px;
+}
+/*end of gallery*/
+
+/*begining of testimonial*/
+
+.custo{
+	width: 70%;
+}
+
+.em{
+	color:#FED550;
+	font-family: arial;
+	font-size: 17px;
+}
+.pp{
+	font-family: arial;
+	margin-top: -10px;
+}
+.cus{
+	width: 70%;
+}
+.cusimg{
+	margin-top: 40px;
+	display: flex;
+	width: 70%;
+}
+
+.allcus{
+	display: flex;
+}
+/*end of testimonials*/
+
+/*beginig of fantastic team*/
+
+.fan{
+	background-image: url(img/2.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.flipp{
+	display: flex;
+}
+
+	.flip{
+	perspective: 1000px;
+}
+
+.flip:hover .flipper, .flip.hover .flipper{
+	 	transform: rotateY(180deg);
+	 }
+	 .flipper, .flipper1, .flipper2, .flipper3{
+	 	transition: .75s;
+	 	transform-style: preserve-3d;
+	 }
+
+	 .flip, .front, .back{
+ 		/*margin-right: 20px;*/
+ 		height: 300px;
+	 	width: 250px;
+	 }
+
+	 .front, .back{
+		/*position: absolute;*/
+		left: 0;
+		top: 0;
+		text-align: center;
+		color: #fff;
+		/*padding-top:120px;*/
+		font-size: 2em; 
+		backface-visibility: hidden;
+	}
+
+	.front{
+		z-index: 2;
+		background-color: transparent;
+		transform: rotateY(0deg);
+	}
+
+	.back{
+		margin-left: 10px;
+		margin-top: -124%;
+		height: 300px;
+	 	width: 200px;
+		background-color: orange;
+		transform: rotateY(180deg);
+	}
+
+/*end of fantastic team*/
+
+/*beginning of blog*/
+.bloger{
+	margin-left: 40px;
+	background-color: #000;
+	width: 410px;
+	overflow: hidden;
+	display: block;
+	transition: .5s all;
+
+}
+.im{
+
+	opacity: .5;
+	/*transform: scale(1);*/
+	transition: .5s all;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/*margin-left: 7%;*/	
+}
+.im:hover {
+	position: absolute;
+	border: 3px solid orange;
+	opacity: 5;
+}
+.welc{
+	display: flex;
+}
+
+.blog-w3grid-text{
+	margin-top: 20px;
+	color: grey;
+	margin-left: 20px;
+}
+.qw{
+	transition: .75s;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/*end fo blog*/
+
+/*rates starts here*/
+.rate{
+	margin-left: 17%;
+	width: 60%;
+	height: 600px;
+}
+
+/*end of rate section*/
+
+/*contact begins here*/
+.allcon{
+	display: flex;
+	justify-content: space-between;
+}
+
+.addr{
+	margin-left: -17%;
+
+}
+
