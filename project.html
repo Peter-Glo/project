@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="font/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/w3-theme-gen.css">
+	<style type="text/css">
+		.img{
+			 margin-left:17%;
+		}
+		.container-fluid{
+			height: 250px;
+			display: flex;
+			background-image:url("img/ph.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			
+		}
+		.grey{
+			background-color: #ccc;
+			padding: 20px;
+		}
+
+		#row{
+			width: 17%;
+			height: 370px;
+			display: none;
+			margin-left: 10%;
+			margin-top: 2%;
+			transition: 2s; 
+		}
+a{
+			
+		margin-top: 4%;
+			transition: 1s;
+			text-decoration: none;
+}
+.header{
+	font-weight: bold;
+	/*margin-left: 20%;*/
+}
+
+		
+	</style>
+</head>
+<body class="w3-sand">
+<div class="container" style="display:flex;">
+
+		<nav class="img w3-center">
+	<img src="img/wotrup.jpg" width="600" style="float:right; margin-top: 6px;" height="240"></nav>
+	
+
+	
+</div><br>
+<nav class="header w3-center">
+	<h1>WELCOME TO WOTRUP.COM</h1>
+</nav>
+<br>
+<button id="show" class="bg-warning w3-text-white w3-hover-text-blue" onclick="menu()">Menu <i class="fa fa-th-list w3-top-left"></i></button>
+<div class="" style="margin-left: 30px; float: right;">
+	<input type="text" name="">
+<button class="btn btn-default" type="search">
+        <i class="fa fa-search"></i>
+      </button>
+</div>
+<br>
+<div id="row" class="row w3-animate-left w3-bar w3-grey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  style="color: red; background-color: pink; border-radius: 50%; width: 27px;float: right;" onclick="clo()"><i class="fa fa-arrow-left"></i></button>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Home</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Blog</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Contact</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Video</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Music</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">News</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">Products</nav></a>
+			<a href="#" class="w3-text-white row"><nav onclick="wot(document.getElementById('').style.display='block')" class="w3-bar-item w3-hover-text-blue w3-button">About</nav></a>
+	
+		</div>
+	
+</div>
+<br>
+<p id="lo" class="grey"><b class="well">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</b></p>
+<br>
+
+<footer class="w3-container w3-theme-d1" style="padding: 32px;">
+	
+</footer>
+
+<script src="react-0.14.3/build/react.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/carousel.js"></script>
+
+<script type="text/javascript">
+	function menu(){
+		row.style.display  = "block";
+		show.style.display  = "none";
+		lo.style.display = "none"
+
+	}
+	function clo() {
+		row.style.display  = "none";
+		lo.style.display = "block";
+		show.style.display  = "block";
+	}
+</script>
+
+</body>
+</html>

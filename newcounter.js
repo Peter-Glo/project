@@ -45,7 +45,7 @@ for (var i = 0; i < bo.length; i++) {
 	array.push(bo[i].value);
 }
 
-	result.innerHTML += '<div id="'+w+no+'"><p><i class="w3-panel fa fa-'+gory.value+'"> '+ gory.value+'<br> <input class="wept" type="number" id="'+w+'" disabled><br>'+cription.value+'<br> <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="ayo('+no+')">+</button>   <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="ay('+no+')">-</button> '+'  <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="yo('+no+')"> <i class="fa fa-trash"></i></button></i></p></div>';
+	result.innerHTML += '<div id="'+w+no+'"><p>'+ gory.value+'<br> <input class="wept" type="number" id="'+w+'" disabled><br>'+cription.value+'<br> <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="ayo('+no+')"><i class="w3-panel fa fa-'+gory.value+'"> </i>+</button>   <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="ay('+no+')">-</button> '+'  <button class="w3-button w3-white w3-border w3-border-red w3-round-large" onclick="yo('+no+')"> <i class="fa fa-trash"></i></button></p></div>';
 
 
 for (var i = 0; i < bo.length; i++) {
@@ -126,14 +126,15 @@ var b = new Date();
 var q = document.getElementById('wel').value;
 
  wel.value = b.toDateString() ;
-localStorage.startH = q;
+ // wel1.value = man.toLocaleTimeString() ;
+// localStorage.startH += q;
 
 var man = new Date();
 var boy = document.getElementById('wel1').value;
 
  wel1.value = man.toLocaleTimeString() ;
  
- localStorage.startT = boy;
+ localStorage.startT += q +"  " + boy +"<br>";
 
 }
 

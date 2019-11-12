@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication Table</title>
+</head>
+<body>
+	<style type="text/css">
+ legend{
+		background-color: blue;
+		color: yellow;
+	}
+	fieldset{
+		background-color: pink;
+	}
+	button{
+		border-radius: 100%;
+		color: yellow;
+		background-color: blue;
+		width: 100px;
+		height: 50px;
+
+	}
+	#yes{
+		background-color: pink;
+	}
+#yes:hover{
+font-size: 20px;
+transition: 2s;
+}
+
+	</style>
+	<center>
+		<fieldset>
+			<legend>PETER  Multiplication Table Generator</legend>
+			Columns: <input type="number" id="col" name=""><br><br>
+			<select id="operator">
+				<option value="*">Multiply</option>
+				<option value="-">Subtract</option>
+				<option value="/">Division</option>
+				<option value="+">Addition</option>
+			</select><br><br>
+			Rows:    <input type="number" id="row" name=""><br><br><br>
+			<button onclick="display()">Display</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+	</fieldset>
+	</center>
+	<div id="yes"></div>
+<script type="text/javascript">
+
+		// col.focus();
+
+		function display(){
+
+		if (col.value <=0 && row.value <=0  || col.value =="" && row.value ==""){
+				alert("Please enter a valid number to perform an operation")
+			}
+			else{
+			// col.focus();
+			var y= "";
+			y+= "<table border= 1;>";
+			for(i=1; i<=col.value;  i++) {
+				y += "<td style= 'min-width: 70px'>";
+	y+= "Table"+i;
+	y += "<table border= 1;>";
+	for(v=1;v<=row.value;v++)
+	{
+
+		y +="<tr><td>" +i+ operator.value + v +"="+ eval (i + operator.value + v)+ "</td></tr>";
+		}y += "</table></td>";
+    }y += "</tr></table>";
+    	yes.innerHTML= y
+    	}
+		}
+
+
+
+
+	</script>
+
+</body>
+</html>

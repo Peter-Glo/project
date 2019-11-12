@@ -57,17 +57,18 @@ return welarray[q]=o;
 }
 function noble(q,o,m){
     
-    if(q !="" && o !="" && m !=''){
-if(q === o && o === m){
+    if(q !=="" && o !=="" && m !== ""){
+if(q === ply1 && ply1 === ply2){
     win = true;
     bravo = true;
     return;
     alert("wow")
 }else{
     over = true;
-    return win = false;
+    
     alert("wooow")
 }
+asp();
 }
 }
 function bass(e){
@@ -86,22 +87,15 @@ function bass(e){
         e.target.innerText = ply2;
         
          put(e.target.id, ply2);
-         
-    }else { function noble(q,o,m){
-        if(q !="" && o !="" && m !=''){
-if(q === o && o === m){
-    win = true;
-    bravo = true;
-    return;
-    alert("wow")
-}
-console.log(welarray)
-
-}
-    }
+   
+        
 }
 
-}}
+console.log()
+}
+
+  }
+
 </script>
 
 </body>

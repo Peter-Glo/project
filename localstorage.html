@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input class="ttt1" type="text" name="">
+<input class="ttt2" type="text" name="">
+<button onclick="add()">add</button>
+<button onclick="addv()">show</button><br>
+<p id="on"></p>
+<script type="text/javascript">
+	var array = [localStorage.getItem("all")];
+	
+	function add() {
+var bo = document.getElementsByClassName('ttt1');
+	var mo = document.getElementsByClassName('ttt2');
+
+		for (var i = 0; i < bo.length; i++) {
+			array.push(bo[i].value);
+		}
+		for (var i = 0; i < mo.length; i++) {
+			array.push(mo[i].value);
+		}
+	console.log(array)
+localStorage.all = array ;
+	}
+function addv() {
+on.innerHTML += localStorage.getItem("all") ;
+}
+</script>
+</body>
+</html>

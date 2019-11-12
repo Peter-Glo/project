@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// local storage is used to store
+		// localStorage.a = 5
+		// localStorage.setItem("d", 5);
+		//localStorage.getItem("d");
+		var obj = {name: "taiwo", dept: "software"};
+		var arr = ["sqi", "ui"];
+		var c = JSON.stringify(arr);
+		var d = JSON. stringify(obj);
+		localStorage.setItem("myArr", arr);
+		localStorage.setItem("myobj", obj);
+		var e = localStorage.getItem("myArr");
+		var f = localStorage.getItem("myObj");
+		var g = JSON.parse(c);
+		var h = JSON.parse(d);
+		// alert(g[0]);
+		alert(h.dept);
+		
+
+
+
+
+		// var arr = [];
+		// var firstobj = {name: "Taiwo", school: "sqi"};
+		// var secondobj = {name: "Emmanuel", school: "unilorin"};
+		// var thirdobj = {name: "Tolu", school: "ui"};
+		// arr.push(firstobj, secondobj, thirdobj);
+		// localStorage.setItem("arrobj", JSON.stringify(arr));
+		// var retrieve = JSON.parse(localStorage.getItem("arrobj"));
+		// for (var i = 0; i < retrieve.length; i++) {
+		// 	console.log(retrieve[i].name)
+		// }
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grades</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+</head>
+<body>
+<div class="bg-warning w3-center">
+	<fieldset>
+		<legend>GRADES</legend>
+	<form>
+		STUDENTS NAME:<br>
+		<input id="wol" class="input" type="text" name="" placeholder="Students Name"><br>
+		SCORES:<br>
+		<input id="wol1" class="input" type="number" name="" placeholder="score">
+	</form><br>
+	<button class="btn btn-primary" onclick="aqq()">submit</button>
+	</fieldset>
+</div>
+<script type="text/javascript">
+	function aqq() {
+		if (wol1.value =="" && wol.value =="" ) {
+			alert(wol.value + " insert text and number please");
+		}else if (wol1.value >=0 && wol1.value <=40) {
+			alert(wol.value + " you fail")
+		} else if (wol1.value >=41 && wol1.value <=50) {
+			alert(wol.value + " fair")
+		} else if (wol1.value >=51 && wol1.value <=65) {
+			alert(wol.value + " you score average mark")
+		} else if (wol1.value >=66 && wol1.value <=100) {
+			alert(wol.value + " exellent")
+		} else if (wol1.value <=0 || wol1.value >100) {
+			alert(wol.value + " out of range")
+		}
+	}
+</script>
+
+</body>
+</html>

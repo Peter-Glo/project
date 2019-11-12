@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new bulb</title>
+	<style type="text/css">
+		#well1{
+			color: transparent;
+		}
+	</style>
+</head>
+
+<body onload="we.play()">
+<img id="well" onclick="change(event)" src="img/bulb.png"><p id="well1">on</p>
+
+<script type="text/javascript">
+	function play(argument) {
+		
+	
+	var we = new Audio["sounds/naruto1.mp3"];
+}
+	function change(e){
+		if (well1.innerText =="on" ) {
+			well.src="img/bulb2.png";
+
+			well1.innerText = "off";
+		} else if (well1.innerText !="on") {
+			 well.src="img/bulb.png";
+			 well1.innerText="on";
+			 // alert("wow");
+		
+
+		}
+	}
+
+</script>
+</body>
+</html>

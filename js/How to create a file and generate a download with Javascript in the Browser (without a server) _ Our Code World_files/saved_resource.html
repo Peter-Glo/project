@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://jsfiddle.net/ourcodeworld/rce6nn3z/2/embedded/js,html,result/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to create a file and generate a download with Javascript in the Browser (without a server) - JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script src="./highlight.pack.js.download"></script>
+      <script src="./embed.js(1).download"></script>
+      <link rel="stylesheet" media="screen" href="./embed-light.css">
+
+      <script type="text/javascript">
+        var height;
+        var force_height = null;
+        var slug = "rce6nn3z";
+        var show_src = "//fiddle.jshell.net/ourcodeworld/rce6nn3z/2/show/light/";
+        var resize_element_counter = 0;
+        var shell_edit_url = "/ourcodeworld/rce6nn3z/2/light/";
+
+      </script>
+
+    <link rel="stylesheet" media="screen" href="./css">
+
+    <style type="text/css" media="screen">
+    </style>
+
+  </head>
+  <body>
+    <div id="wrapper">
+        <header>
+          <h1><a href="https://jsfiddle.net/ourcodeworld/rce6nn3z/2/?utm_source=website&amp;utm_medium=embed&amp;utm_campaign=rce6nn3z" target="_blank">Edit in JSFiddle</a></h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="&quot;active&quot;">
+                  <a data-trigger-type="js" href="https://jsfiddle.net/ourcodeworld/rce6nn3z/2/embedded/js,html,result/#JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a data-trigger-type="html" href="https://jsfiddle.net/ourcodeworld/rce6nn3z/2/embedded/js,html,result/#HTML">HTML</a>
+                </li>
+                <li>
+                  <a data-trigger-type="result" href="https://jsfiddle.net/ourcodeworld/rce6nn3z/2/embedded/js,html,result/#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 81.0938px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont active hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">download</span>(<span class="hljs-params">filename, text</span>) </span>{
+    <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'a'</span>);
+    element.setAttribute(<span class="hljs-string">'href'</span>, <span class="hljs-string">'data:text/plain;charset=utf-8,'</span> + <span class="hljs-built_in">encodeURIComponent</span>(text));
+    element.setAttribute(<span class="hljs-string">'download'</span>, filename);
+
+    element.style.display = <span class="hljs-string">'none'</span>;
+    <span class="hljs-built_in">document</span>.body.appendChild(element);
+
+    element.click();
+
+    <span class="hljs-built_in">document</span>.body.removeChild(element);
+}
+
+<span class="hljs-comment">// Start file download.</span>
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"dwn-btn"</span>).addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-comment">// Generate download of hello.txt file with some content</span>
+    <span class="hljs-keyword">var</span> text = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"text-val"</span>).value;
+    <span class="hljs-keyword">var</span> filename = <span class="hljs-string">"hello.txt"</span>;
+    
+    download(filename, text);
+}, <span class="hljs-literal">false</span>);</pre>
+              <pre class="tCont hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"text-val"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"4"</span>&gt;</span>This is the content of my file<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dwn-btn"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Download dinamically generated text file"</span>/&gt;</span></pre>
+              <div class="tCont result " id="result"></div>
+        </div>
+    </div>
+  
+
+</body></html>

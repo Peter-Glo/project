@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EazyJourning</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="font/css/all.css">
+
+    <style>
+       .header, .bb{
+           width:100%;
+           height: 60px;
+           background-color: aqua;
+       } 
+    a{
+        text-decoration: none;
+    }
+    #first-ap{
+        margin-top: 4%;
+        font-family: cursive;
+        font-size: 12px;
+    }
+    #error{
+        color: #fff;
+        width: 100%;
+        height: 20px;
+        background-color: red;
+        display: none;
+    }
+    </style>
+</head>
+<body class="w3-sand">
+    <div class="header">
+    <nav class="w3-dropdown-hover" style="margin-left: 80%;">
+            <button class="bb w3-button bg-warning">Menu</button>
+<div class="w3-dropdown-content w3-bar-block w3-border w3-animate-zoom">
+    <a class="w3-bar-item w3-btn" href="#">inquiry</a>
+    <a class="w3-bar-item w3-btn" href="#">Help center</a>
+    <a class="w3-bar-item w3-btn" href="#">About</a>
+</div>
+</nav>
+</div>
+
+
+
+ <p id="result"><p>   
+    
+   <nav id="first-ap">
+    <p id="error"></p>
+    <p>&nbsp;&nbsp;Please register first!!</p>
+ Name :  <input id="name" type="text" name="Name" placeholder="Enter your full Name here1"> Email :
+    <input id="email" type="text" name="Email" placeholder="Enter your full Email address here!"><br><br> Password  :
+    <input id="password" type="password" name="password" placeholder="Enter your new password here!"><br>
+<button class="w3-round-xlarge bg-info" onclick="well(event)" style="margin: 35px; font-size: 15px; font-weight: bold;" >submit</button>    
+
+</nav> 
+        
+<script >
+var name = document.getElementById('name').innerHTML;
+var email = document.getElementById('email').innerHTML;
+var pass = document.getElementById('password').innerHTML;
+
+function well(e){
+     if (name =="" && email =="" && pass =="" ){
+       document.getElementById('error').style.display = "block";
+
+        error.innerHTML = "insert requirement correctly";
+        
+    }
+    else if(name !=="" && email !=="" && pass !==""){
+     result.innerHTML ="welcome am Eazyjourning how may i help you?";
+    alert("welcome")
+    }
+}
+</script> 
+<script src="react/build/react.js"></script>       
+</body>
+</html>
