@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.bb{
+				background-attachment: fixed;
+			background-image: url('img/ab.jpg');
+
+			}
+			.bas{
+				border: none;
+				margin-left: 60px;
+				width: 80%;
+			}
+			label{
+				margin-left: 30px;
+				color: #fff;
+				background-color: orange;
+				font-weight: bold;
+				width: 20%;
+			}
+			.form-group, .form-link{
+				margin-left: 50px;
+				margin-top: 40px;
+			}
+			.sb{
+				width: 20%;
+			}
+			.table{
+				float: right;
+			}
+
+	</style>
+</head>
+<body class="bb">
+	<div style="display: flex; width: 160%;">
+		<div class="bas">
+<form class="container-fiuld"><br>
+		<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Name :</label><br><input type="text" class="form" id="bb1"></div>
+	<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Author :</label><br><input class="form" id="bb2"></div>
+	<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Pages :</label><br><input type="" class="form" id="bb3"></div>
+	&nbsp;&nbsp;<input type="button" onclick="addBook()" class="btn btn-default" style="margin-left: 9%;" name="" value="AddBook"><br>
+	</form></div>
+	<div class="table">
+	<input type="button" class="sb btn btn-info" onclick="sh()" value="show">
+		<p id="result"></p>
+	</div>
+</div>
+<script type="text/javascript">
+	function addBook() {
+		// let array = [];
+		let obj = {name:"", author:'', pages:''};
+			obj.name = bb1.value;
+					obj.author = bb2.value;
+					obj.pages = bb3.value;
+
+			// array.push(obj);
+			localStorage.Book += JSON.stringify(obj) +'<br>';
+		 		
+	}
+function sh() {
+	 
+	result.innerHTML = JSON.parse(localStorage.getItem('Book'));
+}
+		
+
+</script>
+</body>
+</html>

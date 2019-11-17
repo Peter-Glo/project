@@ -4,17 +4,36 @@
 	<title></title>
 </head>
 <body>
+<input type="" id="result" name="">
+<button onclick="setNum(1)">1</button>
+<button onclick="setSin()">sin</button>
+<button onclick="eval(result.value)">=</button>
 <script type="text/javascript">
-	var a = "lion";
-	function m() {
-		var a ="cat";
-		console.log(a);
-		n();
+var check = false;
+
+function setNum(myNumber) {
+	if (!check) {
+		result.value = myNumber;
+	}else{
+		result.value = "sin(" + myNumber + ")";
 	}
-	function n(){
-		console.log(a);
-	}
-	m();
+}
+
+function setSin() {
+	check = true;
+	Math.sin(result.value * Math.PI / 180);
+}
+
+	// var a = "lion";
+	// function m() {
+	// 	var a ="cat";
+	// 	console.log(a);
+	// 	n();
+	// }
+	// function n(){
+	// 	console.log(a);
+	// }
+	// m();
 </script>
 </body>
 </html>

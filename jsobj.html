@@ -2,38 +2,36 @@
 <html>
 <head>
 	<title>object</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-<input type="" placeholder="Name" id="name" name="">
-<input type="" placeholder="Author" id="author" name="">
-<input type="" placeholder="No of pages" id="pages" name="">
-<button onclick="set(event)">OK</button>
-<button onclick="show()">Show added Books</button>
-<div id="result"></div>
-<script type="text/javascript">
 	
+<input class="m-2" type="text" placeholder="Name" id="allname" name=""><br>
+<input class="m-2" type="text" placeholder="Author" id="allauthor" name=""><br>
+<input class="m-2" type="number" placeholder="No of pages" id="allpages" name=""><br>
+<button class="m-2" onclick="sdd()">submit</button>
+<button class="m-2" onclick="showlib()">Show added Books</button>
+
+<div id="result"></div>
+
+<script type="text/javascript">
+	function sdd() {
+		var nameobj = {};
+		var array = [localStorage.getItem("newbook")];
+		nameobj.name = allname.value;
+		nameobj.author = allauthor.value;
+		nameobj.pages = allpages.value;
+array.push(nameobj);
+		localStorage.setItem("newbook", JSON.stringify(array));
+		if (localStorage.getItem("newbook")) {
+			array += (localStorage.getItem("newbook"));
+		} else {
+			array = [];
+		}
+	}
 		
-function set(e) {
-	var obj = localStorage.setItem("objects",obj);
-	  var N = document.getElementById('name').value;
-	  var A = document.getElementById('author').value;
-	  var P = document.getElementById('pages').value;
-	  
-obj.push(N , A , P);
-	 localStorage.objects = obj;
 
-	   console.log(obj);
-}
 
-function show() {
-	var N = document.getElementById('name').value;
-	  var A = document.getElementById('author').value;
-	  var P = document.getElementById('pages').value;
-	  
-	result.innerHTML += N +"  "+ A+"  " + P +"<br>";
-
-	console.log(result.innerHTML);
-}
 </script>
 </body>
 </html>
