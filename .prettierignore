@@ -1,0 +1,71 @@
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+[INFO - 7:47:28 PM] Prettier Options:
+{
+  "filepath": "c:\\Users\\PETER\\Desktop\\counter\\src\\index.js",
+  "parser": "babel"
+}
+
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+[INFO - 7:50:11 PM] Prettier Options:
+{
+  "filepath": "c:\\Users\\PETER\\Desktop\\counter\\src\\components\\counter.jsx",
+  "parser": "babel",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "semi": true,
+  "useTabs": true
+}
+
+{
+  "ignored": false,
+  "inferredParser": "babel"
+}
+[INFO - 7:51:53 PM] Prettier Options:
+{
+  "filepath": "c:\\Users\\PETER\\Desktop\\counter\\src\\components\\counter.jsx",
+  "parser": "babel",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "semi": true,
+  "useTabs": true
+}
+[ERROR - 7:51:53 PM] SyntaxError
+Unexpected token, expected "," (6:9)
+  4 |     state = {
+  5 |         count: 0
+> 6 |         address:{
+    |         ^
+  7 |             street: ''
+  8 |         }
+  9 |     }
+SyntaxError: Unexpected token, expected "," (6:9)
+  4 |     state = {
+  5 |         count: 0
+> 6 |         address:{
+    |         ^
+  7 |             street: ''
+  8 |         }
+  9 |     }
+
+  {
+  "ignored": false,
+  "inferredParser": "babel"
+}
+[INFO - 7:57:28 PM] Prettier Options:
+{
+  "filepath": "c:\\Users\\PETER\\Desktop\\counter\\src\\components\\counter.jsx",
+  "parser": "babel",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "semi": true,
+  "useTabs": true
+}

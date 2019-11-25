@@ -4,9 +4,18 @@
 	<title>Library</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<style type="text/css">
+		#result{
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-top: 10%;
+			margin-left: -25%;
+			width: 100%;
+		}
 		.bb{
 				background-attachment: fixed;
-			background-image: url('img/ab.jpg');
+			background: url('img/ab.jpg');
+			background-repeat: no-repeat;
 
 			}
 			.bas{
@@ -27,42 +36,69 @@
 			}
 			.sb{
 				width: 20%;
-			}
+				margin-top: 10%;
+				margin-left: 20%;
+						}
 			.table{
 				float: right;
-			}
+							}
 
 	</style>
 </head>
 <body class="bb">
-	<div style="display: flex; width: 160%;">
+	<div style="display: flex; width: 100%; background-color: brown; height: 611px; opacity: 0.9">
 		<div class="bas">
 <form class="container-fiuld"><br>
 		<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Name :</label><br><input type="text" class="form" id="bb1"></div>
 	<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Author :</label><br><input class="form" id="bb2"></div>
 	<div class="form-group"><label>&nbsp;&nbsp;&nbsp;Pages :</label><br><input type="" class="form" id="bb3"></div>
-	&nbsp;&nbsp;<input type="button" onclick="addBook()" class="btn btn-default" style="margin-left: 9%;" name="" value="AddBook"><br>
+	&nbsp;&nbsp;<input type="button" onclick="addBook()" class="btn btn-danger" style="margin-left: 9%;" name="" value="AddBook"><br>
 	</form></div>
 	<div class="table">
-	<input type="button" class="sb btn btn-info" onclick="sh()" value="show">
-		<p id="result"></p>
+	<input type="button" id="show" class="sb btn btn-info" onclick="sh()" value="Show">
+		<p id="result" class="bg-success"></p>
 	</div>
 </div>
 <script type="text/javascript">
+	// var array = [];	
 	function addBook() {
-		// let array = [];
-		let obj = {name:"", author:'', pages:''};
-			obj.name = bb1.value;
-					obj.author = bb2.value;
-					obj.pages = bb3.value;
+	var array = JSON.parse(localStorage.book);
+			if (bb1.value !== "" && bb2.value !=="" && bb3.value !=="") {
 
-			// array.push(obj);
-			localStorage.Book += JSON.stringify(obj) +'<br>';
-		 		
+	var obj = {name: bb1.value,
+	            author : bb2.value,
+	        	pages : bb3.value};
+					// obj.name = bb1.value;
+					// obj.author = bb2.value;
+					// obj.pages = bb3.value;
+
+			array.push(obj);
+// console.log(array)
+			localStorage.book = JSON.stringify(array);
+
+			bb1.value =""; bb2.value =""; bb3.value = "";
+			alert('you have successfully added a Book');
+			} else {
+				alert('please fill in the filleds');
+			}
+
 	}
+
 function sh() {
-	 
-	result.innerHTML = JSON.parse(localStorage.getItem('Book'));
+	// alert()x
+	// result.innerHTML = localStorage.getItem("book");
+	//  console.log(localStorage.getItem("book"));
+	 if (document.getElementById('show').value == "Show") {
+	 	var well = JSON.parse(localStorage.getItem("book"));
+	 	console.log(well);	
+	 	for (var i = 0; i < well.length; i++) {
+	 		result.innerHTML +='Title : ' + well[i].name +  ' Author : ' + well[i].author; //"title : "+ well.name + " author : " + well.author + " no of pages : " +well.pages ;
+	 	}
+	 	document.getElementById('show').value = "Hide";	
+	} else if (document.getElementById('show').value == "Hide") {
+		result.innerHTML = "";
+		document.getElementById('show').value = 'Show';
+	}
 }
 		
 
