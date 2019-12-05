@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jquery Class</title>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.min.js"></script>
+</head>
+<body>
+	<p>Hello world</p>
+	<div id="result">
+		<button id="blloo">click</button>
+		<input type="text" id="inp">
+	</div>
+
+	
+	<script type="text/javascript" >
+
+		$("document").ready(function () {
+			$('#blloo').click(function(){
+				$('#inp').val('Hello World');
+			})
+		})
+	</script>
+</body>
+</html>
